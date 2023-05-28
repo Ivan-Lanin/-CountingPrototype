@@ -9,6 +9,7 @@ public class Counter : MonoBehaviour
     public Text CounterText;
 
     private int Count = 0;
+    private List<GameObject> eelsInNet = new List<GameObject>();
 
     private void Start()
     {
@@ -17,10 +18,21 @@ public class Counter : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Count += 1;
-        CounterText.text = "Count : " + Count;
-        if (other.gameObject.CompareTag("Eel")) {
-            other.gameObject.SetActive(false);
+        if (other.CompareTag("Eel")) {
+            eelsInNet.Add(other.gameObject);
+        }
+    }
+
+    private void OnTriggerExit(Collider other) {
+        if (other.gameObject.name == "Water") {
+            foreach (GameObject eel in eelsInNet) {
+                Count += 1;
+                CounterText.text = "Count : " + Count;
+                Destroy(eel);
+            }
+        }
+        if (other.CompareTag("Eel")) {
+            eelsInNet.Remove(other.gameObject);
         }
     }
 }
