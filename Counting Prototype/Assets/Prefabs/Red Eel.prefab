@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 2617774604488222972}
   - component: {fileID: 2617774604488222975}
   - component: {fileID: 1373963459173206679}
-  - component: {fileID: 7526898917447536674}
+  - component: {fileID: 1804231260239697596}
   m_Layer: 0
-  m_Name: Eel
+  m_Name: Red Eel
   m_TagString: Eel
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -85,7 +85,7 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &7526898917447536674
+--- !u!114 &1804231260239697596
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -97,6 +97,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e048ef1f8c600f243b02e61cf82e5610, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isRed: 1
 --- !u!1 &2617774605093401541
 GameObject:
   m_ObjectHideFlags: 0
@@ -156,7 +157,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 17ce44e923db5e54b86e2f1b70883fa5, type: 2}
+  - {fileID: 2100000, guid: bab15090945bc8b46820f86a9155138a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
